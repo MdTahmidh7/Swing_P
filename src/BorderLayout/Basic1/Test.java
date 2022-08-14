@@ -1,6 +1,6 @@
 package BorderLayout.Basic1;
 
-public class BorderLayout {
+public class Test {
     public static void main(String[] args) {
         MainFrame mainFrame = new MainFrame();
     }

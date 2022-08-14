@@ -1,12 +1,16 @@
-package BorderLayout.Basic1;
+package BorderLayout.ComponentSize;
+
+import BorderLayout.Basic1.TextListener;
+import BorderLayout.Basic1.TextPanel;
+import BorderLayout.Basic1.ToolBar;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.BorderLayout;
 
 public class MainFrame extends JFrame {
    private TextPanel textPanel;
     private ToolBar toolBar;
+    private FormPanel formPanel;
     public MainFrame(){
         super("Main Frame");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -16,6 +20,7 @@ public class MainFrame extends JFrame {
 
         textPanel = new TextPanel();
         toolBar = new ToolBar();
+        formPanel = new FormPanel();
 
         toolBar.setTextListener(new TextListener() {
             @Override
@@ -26,6 +31,7 @@ public class MainFrame extends JFrame {
 
         this.add(textPanel,BorderLayout.CENTER);
         this.add(toolBar,BorderLayout.NORTH);
+        this.add(formPanel,BorderLayout.WEST);
         this.setVisible(true);
     }
 }
